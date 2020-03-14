@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+const bg_color=Color(0xFF1D1E33);
+const h =80.0;
+const btc=Color(0xFFC71585);
+
 void main()=>runApp(MaterialApp(
   debugShowCheckedModeBanner: false,
   home: MyApp(),
@@ -23,19 +27,26 @@ class MyApp extends StatelessWidget {
         children: <Widget>[
             Expanded(
                       child: Row(children: <Widget>[
-              Expanded(child: Expend(colour: Color(0xFF1D1E33),)),
-              Expanded(child: Expend(colour: Color(0xFF1D1E33),)),
+              Expanded(child: Expend(colour: bg_color,)),
+              Expanded(child: Expend(colour: bg_color,)),
               
             ],),
           ),
-          Expanded(child: Expend(colour: Color(0xFF1D1E33),)),
+          Expanded(child: Expend(colour: bg_color,)),
           Expanded(
                       child: Row(children: <Widget>[
-              Expanded(child: Expend(colour: Color(0xFF1D1E33),)),
-              Expanded(child: Expend(colour: Color(0xFF1D1E33),)),
+              Expanded(child: Expend(colour: bg_color,)),
+              Expanded(child: Expend(colour: bg_color,)),
               
             ],),
           ),
+
+          Container(
+            
+            margin: EdgeInsets.only(top: 10.0),
+            height: h,
+          color: btc,
+          )
 
           
 
@@ -51,7 +62,7 @@ class MyApp extends StatelessWidget {
 class Expend extends StatelessWidget {
   Expend({@required this.colour});
   
-  Color colour;
+  final Color colour;
 
   @override
   Widget build(BuildContext context) {
